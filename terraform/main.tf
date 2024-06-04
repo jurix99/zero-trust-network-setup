@@ -9,4 +9,5 @@ terraform {
 
 provider "twingate" {
   network   = "Julientr99"
+  api_token = "var.api_key"
 }
