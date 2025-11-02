@@ -1,0 +1,63 @@
+# ==============================================================================
+# Terraform Variables Configuration Example
+# ==============================================================================
+#
+# Copy this file to terraform.tfvars and fill in your actual values:
+#   cp terraform.tfvars.example terraform.tfvars
+#
+# IMPORTANT: terraform.tfvars contains sensitive data and should be in .gitignore
+#
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Twingate Configuration
+# ------------------------------------------------------------------------------
+
+# Your Twingate account name (network subdomain)
+# Example: If your Twingate URL is "mycompany.twingate.com", use "mycompany"
+account_name = "julientr99"
+
+# Twingate API key (SENSITIVE - get this from Twingate Admin Console)
+# Navigate to: Settings > API > Generate Token
+api_key = "your-twingate-api-key-here"
+
+# Twingate group ID for access control
+# Find this in: Teams > [Your Group] > Copy Group ID
+group_id = "your-group-id-here"
+
+# ------------------------------------------------------------------------------
+# Project Configuration
+# ------------------------------------------------------------------------------
+
+# Project name for resource naming and tagging
+project_name = "nas-media"
+
+# Environment (dev, staging, or prod)
+environment = "prod"
+
+# ------------------------------------------------------------------------------
+# System Configuration
+# ------------------------------------------------------------------------------
+
+# Timezone for container applications
+# Use IANA timezone format: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# Examples: "Europe/Paris", "America/New_York", "Asia/Tokyo", "UTC"
+timezone = "UTC"
+
+# Base path for Docker volumes on the host system
+# Leave empty ("") to use current working directory
+# Examples: 
+#   - Linux: "/mnt/data" or "/home/user/media"
+#   - Windows: "C:/data" or "D:/media"
+#   - macOS: "/Users/username/media"
+volume_path = ""
+
+# ------------------------------------------------------------------------------
+# Advanced Configuration
+# ------------------------------------------------------------------------------
+
+# Twingate connector log level (0-7, where 7 is most verbose)
+# 0 = Emergency, 1 = Alert, 2 = Critical, 3 = Error (default)
+# 4 = Warning, 5 = Notice, 6 = Info, 7 = Debug
+twingate_connector_log_level = 3
+
